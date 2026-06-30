@@ -18,6 +18,26 @@ html{
     z-index: 1000;
 }
 
+@media (max-width:768px){
+
+    .navbar{
+        gap: 10px;
+        padding: 10px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        white-space: nowrap;
+    }
+
+    .navbar::-webkit-scrollbar{
+        display: none;
+    }
+
+    .navbar a{
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+}
+
 #home{
     padding-top: 120px;
 }
