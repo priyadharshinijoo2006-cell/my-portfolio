@@ -337,136 +337,131 @@ body {
 .about-card ul li:hover{
     background:#00bfff;
     color:#000;
-    transform:translateX(8px);
+    transform:translateX(-8px);
 }
 
-.college-card{
-
-background:#121d35;
-padding:30px;
-border-radius:20px;
-margin-bottom:35px;
-
-border:1px solid #00bfff;
-
-box-shadow:0 0 20px rgba(0,191,255,.3);
-
-transition:.4s;
-
+.education {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.college-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 0 35px #00bfff;
-
+/* 1. Education chinna blue box center la */
+.banner-header {
+  background: #1e5a96;
+  padding: 8px 30px;
+  border-radius: 6px;
+  margin :25px;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(30, 90, 150, 0.5);
 }
 
-.college-card h3{
-
-color:#00d9ff;
-font-size:28px;
-
+.banner-header h2 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
 }
 
-.college-card p{
-
-color:#fff;
-margin:15px 0;
-
+/* 2. B.Sc card - thaniya center la perusa */
+.college-card {
+  background: #16213e;
+  width: 100%;
+  padding: 28px 32px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.15);
+  border: 1px solid rgba(0, 188, 212, 0.1);
 }
 
-.college-info{
-
-display:flex;
-justify-content:space-between;
-color:#9fdcff;
-
-font-weight:bold;
-
+.college-card h3 {
+  color: #00bcd4; /* Cyan color */
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
 }
 
-.school-container{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:25px;
-
+.college-card .college-name {
+  color: #ffffff; /* White */
+  font-size: 15px;
+  margin: 0 0 14px 0;
 }
 
-.school-card{
-
-background:#121d35;
-
-padding:25px;
-
-border-radius:18px;
-
-text-align:center;
-
-border:1px solid rgba(0,191,255,.3);
-
-box-shadow:0 0 15px rgba(0,191,255,.2);
-
-transition:.4s;
-
+.college-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.school-card:hover{
-
-transform:translateY(-8px);
-
-background:#00bfff;
-
-color:#000;
-
+.college-info .status {
+  color: #00bcd4; /* Cyan */
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.school-card h3{
-
-color:#00d9ff;
-
-margin-bottom:12px;
-
+.college-info .percent {
+  color: #00bcd4; /* Cyan */
+  font-size: 16px;
+  font-weight: 700;
 }
 
-.school-card:hover h3{
-
-color:#000;
-
+/* 3. 12th 11th 10th - 3 box side by side */
+.school-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.school-card p{
-
-color:#fff;
-
-margin-bottom:10px;
-
+.school-card {
+  background: #16213e;
+  width: 100%;
+  padding: 24px 16px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.15);
+  border: 1px solid rgba(0, 188, 212, 0.1);
+  transition: all 0.3s ease;
 }
 
-.school-card:hover p{
-
-color:#000;
-
+.school-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 188, 212, 0.25);
 }
 
-.school-card span{
-
-font-size:20px;
-
-font-weight:bold;
-
-color:#7CFC00;
-
+.school-card h3 {
+  color: #00bcd4; /* Cyan - 12th 11th 10th */
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
 }
 
-.school-card:hover span{
+.school-card p {
+  color: #ffffff; /* White - GGHSS GHSS */
+  font-size: 14px;
+  margin: 0 0 12px 0;
+}
 
-color:#000;
+.school-card .grade {
+  color: #4caf50; /* Green - 77% 74% 59% */
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+}
 
+/* Mobile ku */
+@media (max-width: 500px) {
+  .school-container {
+    gap: 12px;
+  }
+  .school-card {
+    width: 100px;
+    padding: 20px 12px;
+  }
 }
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
@@ -474,8 +469,7 @@ color:#000;
 .skills-section {
     width: 100%;
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 40px auto 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -501,8 +495,11 @@ color:#000;
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    width: 100%;
+    margin: 30px 0 0 0;
+    padding: 0 20px;
 }
 
 
@@ -510,6 +507,8 @@ color:#000;
     background: linear-gradient(145deg, #152238, #0b1326);
     border-radius: 12px;
     padding: 20px;
+    width: 100%;
+    min-height: 140px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -584,8 +583,9 @@ color:#000;
 
 /* Header Banner Style Matching certificates section */
 .section-title-container {
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    padding: 15px;
+    background: #1e5a96;
+    width: 100%;
+    padding: 12px 20px;
     text-align: center;
     border-radius: 8px;
     margin-bottom: 30px;
@@ -1077,6 +1077,7 @@ color:#000;
 /* Centered Banner Header matching your template header design */
 .certs-banner-header {
     background: linear-gradient(135deg, #1e40af, #1d4ed8);
+    width: 100%;
     padding: 14px 20px;
     border-radius: 8px;
     text-align: center;
@@ -1086,17 +1087,20 @@ color:#000;
 
 .certs-banner-header h2 {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 800;
     color: #ffffff;
     letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 /* Modern Response Grid Layout */
 .certs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 22px;
+    width: 100%;
+    margin: 30px 0 0 0;
     perspective: 1000px;
 }
 
@@ -1226,7 +1230,8 @@ color:#000;
 /* Section Header to match your current typography */
 .section-3d-banner-header {
     background: linear-gradient(135deg, #1e40af, #1d4ed8);
-    padding: 14px 20px;
+    width: 100%;
+    padding: 12px 20px;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -1239,22 +1244,25 @@ color:#000;
     font-size: 1.25rem;
     font-weight: 800;
     color: #ffffff;
-    letter-spacing: 0.08em;
+    letter-spacing: 1.5px;
 }
 /* Cards Grid Alignment */
 .languages-3d-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    perspective: 1000px; /* Gives real 3D depth perspective */
+    width:100%;
+    margin: 30px 0 0 0;
+    perspective: 1000px;
 }
 
 /* Real 3D Card Styling */
 .card-3d {
+    width: 100%;
     position: relative;
     background: linear-gradient(145deg, #102a43, #0b1b29); /* Deep Blue-Black Gradient */
     border-radius: 14px;
-    padding: 24px 20px;
+    padding: 28px 22px;
     color: #ffffff;
     cursor: pointer;
     
@@ -1332,6 +1340,7 @@ color:#000;
     pointer-events: none;
     z-index: 1;
 }
+
 
 /* Contact Section Base */
 .contact-section {
@@ -1439,6 +1448,146 @@ color:#000;
     color: #38b6ff;
 }
 
+
+
+/* Mobile responsive screen adjust */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .location-card-wide {
+        grid-column: span 1;
+    }
+    .thank-you-banner p {
+        font-size: 0.95rem;
+    }
+}
+
+body{
+    font-family: Arial;
+    text-align: center;
+    background: #0d1117;
+    color: white;
+}
+
+#contact{
+    margin-top: 80px;
+}
+
+input, textarea{
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button{
+    padding: 10px 25px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section {
+    background-color: #0b132b; /* Dark Blue Theme */
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-container {
+    background: rgba(255, 255, 255, 0.03); 
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.contact-title {
+    color: #00d4ff; /* Cyan theme color */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    color: #ffffff;
+    opacity: 0.8;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Error left-align aaga */
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+/* Individual Error Sentences Styling */
+.error-text {
+    color: #ff4b4b;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Success Message Box */
+.success-message {
+    display: none;
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    background-color: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #00d4ff, #0080ff);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+}
+
 /* Thank you bottom banner block */
 .thank-you-banner {
     background: linear-gradient(to right, #1e3c72, #2a5298);
@@ -1455,122 +1604,5 @@ color:#000;
     font-size: 1.1rem;
     font-weight: bold;
     letter-spacing: 1.5px;
-}
-
-/* Mobile responsive screen adjust */
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-    .location-card-wide {
-        grid-column: span 1;
-    }
-    .thank-you-banner p {
-        font-size: 0.95rem;
-    }
-}
-
-.contact-form-section{
-    width:100%;
-    max-width:900px;
-    margin:60px auto;
-    padding:20px;
-}
-
-.contact-form-card{
-    background:linear-gradient(145deg,#152238,#0b1326);
-    border-radius:18px;
-    padding:35px;
-    border:1px solid rgba(0,191,255,.25);
-    box-shadow:0 10px 30px rgba(0,0,0,.4);
-    transition:.4s;
-}
-
-.contact-form-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 35px rgba(0,191,255,.25);
-}
-
-.input-group{
-    display:flex;
-    flex-direction:column;
-    margin-bottom:22px;
-}
-
-.input-group label{
-    color:#38b6ff;
-    font-weight:600;
-    margin-bottom:8px;
-}
-
-.input-group input,
-.input-group textarea{
-
-    background:#0d1117;
-    color:#fff;
-    border:2px solid #1f3b63;
-    border-radius:10px;
-    padding:15px;
-    font-size:15px;
-    outline:none;
-    transition:.3s;
-}
-
-.input-group input:focus,
-.input-group textarea:focus{
-
-    border-color:#00d4ff;
-    box-shadow:0 0 15px rgba(0,212,255,.35);
-
-}
-
-.input-group textarea{
-    resize:none;
-}
-
-.send-btn{
-
-    width:100%;
-    padding:15px;
-    background:linear-gradient(90deg,#0066ff,#00d4ff);
-    color:#fff;
-    border:none;
-    border-radius:10px;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.send-btn:hover{
-
-    transform:scale(1.02);
-    box-shadow:0 0 20px #00d4ff;
-
-}
-
-.message{
-
-    margin-top:20px;
-    text-align:center;
-    font-weight:bold;
-    font-size:16px;
-
-}
-
-@media(max-width:768px){
-
-.contact-form-card{
-
-padding:20px;
-
-}
-
-.send-btn{
-
-font-size:15px;
-
-}
-
 }
 }

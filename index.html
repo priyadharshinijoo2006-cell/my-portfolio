@@ -21,6 +21,7 @@
         <a href="#internship">Internship</a>
         <a href="#languages">Languages</a>
         <a href="#contact">Contact</a>
+        <a href="#contact us">Contact Us</a>
     </nav>
 </header>
 
@@ -60,6 +61,7 @@
     <hr>
 
     <section id="about">
+   <section class="about-section">
 
     <h2 class="section-title">about</h2>
 
@@ -131,48 +133,42 @@
     </section>
 </section>
     
-<section id="education">
+<section class="education" id="education">
+  <!-- Chinna center blue header -->
+  <div class="banner-header">
+    <h2>Education</h2>
+  </div>
 
-<h2 class="section-title">Education</h2>
-
-<!-- College -->
-<div class="college-card">
-
-    <h3> B.Sc Computer Science</h3>
-
-    <p>Apollo Arts and Science College</p>
-
+  <!-- B.Sc thaniya center la -->
+  <div class="college-card">
+    <h3>B.Sc Computer Science</h3>
+    <p class="college-name">Apollo Arts and Science College</p>
     <div class="college-info">
-        <span>Currently Pursuing (3rd Year)</span>
-        <span>88%</span>
+      <span class="status">Currently Pursuing (3rd Year)</span>
+      <span class="percent">88%</span>
     </div>
+  </div>
 
-</div>
-
-<!-- Schools -->
-
-<div class="school-container">
-
+  <!-- 12th 11th 10th side by side -->
+  <div class="school-container">
     <div class="school-card">
-        <h3> 12th</h3>
-        <p>GGHSS</p>
-        <span>77%</span>
+      <h3>12th</h3>
+      <p>GGHSS</p>
+      <span class="grade">77%</span>
     </div>
 
     <div class="school-card">
-        <h3> 11th</h3>
-        <p>GGHSS</p>
-        <span>74%</span>
+      <h3>11th</h3>
+      <p>GGHSS</p>
+      <span class="grade">74%</span>
     </div>
 
     <div class="school-card">
-        <h3> 10th</h3>
-        <p>GHSS</p>
-        <span>59%</span>
+      <h3>10th</h3>
+      <p>GHSS</p>
+      <span class="grade">59%</span>
     </div>
-
-</div>
-
+  </div>
 </section>
 
 <!-- SKILLS SECTION -->
@@ -533,6 +529,42 @@
         </div>
     </div>
 </section>
+
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <h2 class="contact-title">Contact Us</h2>
+        <p class="contact-subtitle">Feel free to reach out for collaborations or just a friendly hello!</p>
+        
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name">
+                <!-- Error Element -->
+                <span id="nameError" class="error-text"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Your Email">
+                <!-- Error Element -->
+                <span id="emailError" class="error-text"></span>
+            </div>
+            
+            <div class="form-group">
+                <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+                <!-- Error Element -->
+                <span id="messageError" class="error-text"></span>
+            </div>
+            
+            <!-- Success Message Element -->
+            <div id="formSuccess" class="success-message"></div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <script src="script.js"></script>
+
+    </div>
+</section>
+
 
     <!-- Thank You Footer Banner matching the style -->
     <div class="thank-you-banner">
